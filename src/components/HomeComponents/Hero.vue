@@ -10,7 +10,7 @@
           PT THOIBA SEJAHTERA WISATA
         </h1>
         <h1 class="text-white font-semibold text-[22px] md:text-[42px]">
-          TWS Tour & Travel
+          TSW Tour & Travel
         </h1>
         <p class="text-sm font-medium leading-7 text-white md:text-[21px]">
           Izin Umrah U.535 Thn 2020

@@ -3,12 +3,36 @@
       <Navbar />
       <div class="hero-parallax pt-[80px]">
         <div class="lg:container px-4 lg:px-[130px] mt-6">
-          <h1 class="text-white font-bold text-3xl lg:text-5xl">HAJI</h1>
+          <h1 class="text-white font-bold text-3xl lg:text-5xl">Pendaftaran</h1>
           <div class="bg-[#00A784] h-2 w-28 mt-2 rounded-md"></div>
         </div>
       </div>
       <div class="m-6">
-        <h1>PAKET BELUM TERSEDIA</h1>
+        <h2 class="font-semibold">Persyaratan Pendaftaran Umrah :</h2> 
+        <ul>
+          <li>Mengisi formulir Pendaftaran elektrik maupun manual (datang ke kantor TSW)</li>
+          <li>Passport (3 kata) minimal 1 tahun masih berlaku</li>
+          <li>Pas foto berwarna ukuran 3x4 dan 4x6 masing-masing 5 lembar dengan muka 80%, tidak menggunakan accessories (peci, topi, kacamata dll). Latarbelakang foto berwarna putih</li>
+          <li>Foto copy KTP, KK barcode dan Akte Lahir</li>
+          <li>Buku ICV atau buku kuning vaksin meningitis</li>
+          <li>Kartu/Sertifikat vaksin dosis 1-3 (bisa dikonsultasikan jika tidak ada)</li>
+          <li>Dokumen pendukung lain nya (Buku nikah/Ijazah) *jika tidak ada akte lahir</li>
+        </ul>
+
+         <h2 class="font-semibold">Persyaratan Pembuatan Passport : </h2> 
+        <ul>
+          <li>KTP</li>
+          <li>Kartu Keluarga Barcode</li>
+          <li>Akte Lahir ( Bisa diganti dengan Ijazah SMP/SMA/Setaraf atau surat nikah)</li>
+          <li>Surat rekomendasi dari TSW Travel</li>
+          <li>Surat Rekomendasi dari Kementerian Agama</li>
+
+        </ul>
+
+        <h2 class="font-semibold">Note :</h2> 
+        <p>Nama, tanggal lahir, tempat lahir, ibu dan bapak wajib sama</p>
+
+
       </div>
       <!-- <div class="flex flex-row gap-3 mt-6 lg:container px-16 mb-5 ">
         <div class="w-1/4 border invisible lg:visible hidden lg:block">

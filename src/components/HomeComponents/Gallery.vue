@@ -37,26 +37,30 @@
 </template>
 
 <script>
+import mesir from '@/assets/images/galeri/mesir/mesir6.jpeg';
+import regfeb from '@/assets/images/galeri/regfeb/regfeb4.jpeg';
+import turki from '@/assets/images/galeri/turki/turki6.jpeg';
+import syawal from '@/assets/images/galeri/syawal/syawal5.jpeg';
 export default {
   props: ["id"],
   data() {
     return {
       galleries: [
         {
-          img: "https://thumb.viva.co.id/media/frontend/thumbs3/2022/06/29/62bb7f4d919b3-gelandang-liverpool-naby-keita-menjalankan-ibadah-haji_1265_711.jpg",
-          text: "CITY TOUR KE KEBUN KURMA - JAMA'AH UMROH 7 JANUARI 2023",
+          img: mesir,
+          text: "Umrah Plus Mesir dan Oman Februari 2023",
         },
         {
-          img: "https://maluku.kemenag.go.id/upload/posting/medium_06-08-2018-04-21-23-6096.jpg",
-          text: "ZIARAH KE JABAL UHUD - JAMAAH UMROH 7 JANUARI 2023",
+          img: regfeb,
+          text: "Umrah Regular Februari 2023",
         },
         {
-          img: "https://hajiumrahziarah.files.wordpress.com/2007/11/p1030443.jpg",
-          text: "JAMAAH 7 JANUARI 2023 SEUSAI MELAKSANAKAN RANGKAIAN IBADAH UMROH",
+          img: turki,
+          text: "Umrah Plus Turkey Maret 2023",
         },
         {
-          img: "https://cdn.libur.com.my/2022/11/u-1.jpeg",
-          text: "ROMBONGAN 10 SEPTEMBER 2022 SAAT DI TEMPAT MIQAT MADINAH",
+          img: syawal,
+          text: "Umrah Syawal Mei 2023",
         },
       ],
     };

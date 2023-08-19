@@ -318,37 +318,37 @@
       <div class="flex-grow grid grid-cols-1 lg:grid-cols-2 gap-3">
 
        <div class="bg-white  h-1/2">
-        <img class="object-center h-60 w-full" src="https://storage.googleapis.com/muslimpergi/uploads/listing/pict/2424/medium_3._SLIDE-PAKET-NAMIRA-TRAVEL-2023-MUSIM-BARU_03.jpg" alt="">
+        <img class="object-center h-60 w-full" src="../assets/images/paket/umrah_agustus.jpeg" alt="">
         <div class="p-4 border">
-          <h1 class="text-blue-900 text-2xl font-normal">Paket Umroh Awal September 2023</h1>
+          <h1 class="text-blue-900 text-2xl font-normal">Umrah Reguler Agustus 2023</h1>
 
           <div class="mt-4">
-            <p class="text-xl">Start from <span class="text-green-500">32.9 jt</span> /per person</p>
-            <p class="text-green-500 text-xl">Available seats: 40 pax</p>
+            <p class="text-xl">Start from <span class="text-green-500">33 jt</span> /per person</p>
+            <p class="text-green-500 text-xl">Available seats: 30 pax</p>
           </div>
         </div>
        </div>
 
        <div class="bg-white  h-1/2">
-        <img class="object-center h-60 w-full" src="https://storage.googleapis.com/muslimpergi/uploads/listing/pict/2424/medium_3._SLIDE-PAKET-NAMIRA-TRAVEL-2023-MUSIM-BARU_03.jpg" alt="">
+        <img class="object-center h-60 w-full" src="../assets/images/paket/turkey.png" alt="">
         <div class="p-4 border">
-          <h1 class="text-blue-900 text-2xl font-normal">Paket Umroh Awal September 2023</h1>
+          <h1 class="text-blue-900 text-2xl font-normal">Umrah Plus Turkey</h1>
 
           <div class="mt-4">
-            <p class="text-xl">Start from <span class="text-green-500">32.9 jt</span> /per person</p>
-            <p class="text-green-500 text-xl">Available seats: 40 pax</p>
+            <p class="text-xl">Start from <span class="text-green-500">-</span> /per person</p>
+            <p class="text-green-500 text-xl">Available seats: 45 pax</p>
           </div>
         </div>
        </div>
 
        <div class="bg-gray-500  h-1/2">
-        <img class="object-center h-60 w-full" src="https://storage.googleapis.com/muslimpergi/uploads/listing/pict/2424/medium_3._SLIDE-PAKET-NAMIRA-TRAVEL-2023-MUSIM-BARU_03.jpg" alt="">
+        <img class="object-center h-60 w-full" src="../assets/images/paket/reguler.jpeg" alt="">
         <div class="p-4 border">
-          <h1 class="text-blue-900 text-2xl font-normal">Paket Umroh Awal September 2023</h1>
+          <h1 class="text-blue-900 text-2xl font-normal">Umrah Regular 2023</h1>
 
           <div class="mt-4">
-            <p class="text-xl">Start from <span class="text-green-500">32.9 jt</span> /per person</p>
-            <p class="text-green-500 text-xl">Available seats: 40 pax</p>
+            <p class="text-xl">Start from <span class="text-green-500">30-35 jt</span> /per person</p>
+            <p class="text-green-500 text-xl">Available seats: 45 pax</p>
           </div>
         </div>
        </div>

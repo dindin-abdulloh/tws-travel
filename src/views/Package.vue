@@ -10,8 +10,14 @@
         </p>
       </div> -->
       <div class="lg:container px-4 lg:px-[130px] mt-8">
-        <h1 class="text-white font-bold text-3xl lg:text-5xl">
-          UMROH ROYAL VIP PLUS THAIF 12 HARI HOLIDAY SEASON DESEMBER 2023
+        <h1 v-if="id == 1" class="text-white font-bold text-3xl lg:text-5xl">
+          UMRAH REGULER AGUSTUS 2023
+        </h1>
+        <h1 v-else-if="id == 2" class="text-white font-bold text-3xl lg:text-5xl">
+          Umrah Plus Turkey
+        </h1>
+        <h1 v-else class="text-white font-bold text-3xl lg:text-5xl">
+          Umrah Regular 2023
         </h1>
         <div class="bg-[#00A784] h-2 w-28 mt-2 rounded-md"></div>
       </div>
@@ -23,129 +29,205 @@
     </div>
     <div class="lg:container lg:px-[130px] flex flex-col lg:flex-row gap-8 mt-16">
       <div class="lg:w-[60%] px-4 lg:px-0 w-full pb-8">
-        <img src="../assets/images/background/paket.png" alt="" />
-
+        <img v-if="id == 1" src="../assets/images/paket/umrah_agustus.jpeg" alt="" />
+        <img v-else-if="id == 2" src="../assets/images/paket/turkey.png" alt="" />
+        <img v-else src="../assets/images/paket/reguler.jpeg" alt="" />
         <div class="pt-6 text-[#555]">
           <h1 class="text-[#333] font-normal text-3xl">Deskripsi</h1>
 
-          <div class="mt-6 text-[#555]">
+          <!-- <div class="mt-6 text-[#555]">
             <p>"Umroh Sejarah Bangkitnya Islam"</p>
             <p>Umroh Plus Badr & Thaif</p>
+          </div> -->
+
+          <div v-if="id == 2">
+            <h2 class="font-bold">
+              Untuk Detail Paket Lebih Lanjut Silahkan Hubungi CS KAMI.
+            </h2>
           </div>
 
           <div class="mt-6 text-[#555]">
-            <p>PROGRAM 12 HARI</p>
+            <h3 class="font-semibold">PROGRAM :</h3>
+            <ul class="ml-6" v-if="id == 1">
+              <li class="list-disc">Paket Umroh 2 Jumat</li>
+              <li class="list-disc">PROGRAM 14 HARI PP</li>
+            </ul>
+
+            <ul class="ml-6" v-else-if="id == 2">
+              <li class="list-disc">Paket Umroh Plus Tukey 2023</li>
+            </ul>
+
+            <ul class="ml-6" v-else>
+              <li class="list-disc">Paket Umroh Bulan Oktober, November, Desember 2023</li>
+            </ul>
           </div>
 
           <div class="mt-6 text-[#555]">
-            <p>🛫 SAUDIA AIRLINES</p>
-            <p>(Direct Flight to Madinah)</p>
+            <h3 class="font-semibold">PENERBANGAN :</h3>
+            <ul class="ml-6" v-if="id == 2">
+              <li class="list-disc">Hubungi Travel</li>
+            </ul>
+            <ul class="ml-6" v-else>
+              <li class="list-disc">🛫 Garuda Indonesia (Direct Flight )</li>
+            </ul>
           </div>
 
           <div class="mt-6 text-[#555]">
-            <p>"Keberangkatan" :</p>
-            <p>Jakarta-Madinah</p>
-          </div>
+            <h3 class="font-semibold">HOTEL :</h3>
+            <ul class="ml-6" v-if="id == 1">
+              <li class="list-disc">🏨 Mekkah *4</li>
+              <li class="list-disc">🏨 Madinah *3</li>
+            </ul>
 
-          <div>
-            <p>"Kepulangan"</p>
-            <p>Jeddah-Jakarta</p>
-          </div>
+            <ul class="ml-6" v-else-if="id == 2">
+              <li class="list-disc">🏨 Mekkah *3/*4/*5</li>
+              <li class="list-disc">🏨 Madinah *3/*4/*5</li>
+            </ul>
 
-          <div class="mt-6 text-[#555]">
-            <p>HOTEL</p>
-            <p>🏨 Mekkah *5</p>
-            <p>Le Meridien Kudai / Setaraf</p>
-          </div>
-
-          <div class="mt-6 text-[#555]">
-            <p>🏨 Madinah *4</p>
-            <p>Province Al Sham / Setaraf</p>
+            <ul class="ml-6" v-else>
+              <li class="list-disc">🏨 Mekkah *3/*4/*5</li>
+              <li class="list-disc">🏨 Madinah *3/*4/*5</li>
+            </ul>
           </div>
 
           <div class="mt-6 text-[#555]">
-            <p>Paket Kamar (by request, jika Jemaah minta daftar keluarga selain Kamar di atas) :</p>
-            <p>Double Rp.39.450.000</p>
-            <p>Triple Rp.37.450.000</p>
-            <p>Quad Rp.36.450.000</p>
+            <h3 class="font-semibold">BIAYA :</h3>
+            <div v-if="id == 1">
+              <div class="ml-3" >
+              <p><span class="font-semibold">DP</span> hanya <span class="font-semibold">Rp.5.000.000</span> / per pax
+                Harga paket 30, 33, 36 dan 39jt perbedaan nya <span class="font-semibold">hanya di Hotel saja</span>.
+                Harga tersebut untuk <span class="font-semibold">sekamar berempat</span>
+                </p>
+            </div>
+
+              <ul class="ml-3 mt-4">
+                <li class="">Semua pembayaran hanya pada Rekening :</li>
+                <li class="">Bank Syariah Indonesia</li>
+                <li class="">An PT Thoiba Sejahtera Wisata</li>
+                <li class="">7213160251</li>
+              </ul>
+            </div>
+
+            <div v-else-if="id == 2">
+              <div class="ml-3" >
+                <p><span class="font-semibold">DP</span> hanya <span class="font-semibold">Rp.5.000.000</span> / per pax
+                  Harga paket perbedaannya <span class="font-semibold">hanya di Hotel saja</span>.
+                  Harga tersebut untuk <span class="font-semibold">sekamar berempat</span>
+                  </p>
+              </div>
+
+              <ul class="ml-3 mt-4">
+                <li class="">Semua pembayaran hanya pada Rekening :</li>
+                <li class="">Bank Syariah Indonesia</li>
+                <li class="">An PT Thoiba Sejahtera Wisata</li>
+                <li class="">7213160251</li>
+              </ul>
+            </div>
+      
+            <div v-else>
+              <div class="ml-3" >
+                <p><span class="font-semibold">DP</span> hanya <span class="font-semibold">Rp.5.000.000</span> / per pax
+                  Harga paket perbedaannya <span class="font-semibold">hanya di Hotel saja</span>.
+                  Harga tersebut untuk <span class="font-semibold">sekamar berempat</span>
+                  </p>
+              </div>
+
+              <ul class="ml-3 mt-4">
+                <li class="">Semua pembayaran hanya pada Rekening :</li>
+                <li class="">Bank Syariah Indonesia</li>
+                <li class="">An PT Thoiba Sejahtera Wisata</li>
+                <li class="">7213160251</li>
+              </ul>
+            </div>
           </div>
 
           <div class="mt-6 text-[#555]">
-            <p>Child :</p>
-            <p>Anak 2-8th Rp.21.550.000</p>
-            <p>Infant 0-2th Rp.11.000.000</p>
-            <p>📌tanpa perlengkapan & tempat tidur</p>
-          </div>
-
-          <div class="mt-6 text-[#555]">
-            <p>Dp hanya 👉🏻 Rp.5.000.000 / per pax</p>
-          </div>
-
-          <div class="mt-6 text-[#555]">
+            <h3 class="font-semibold">PEMBIMBING JAMAAH :</h3>
+            <ul class="ml-6">
+              <li class="list-disc">H. Cecep Rahmat ( Pemilik TSW Travel)</li>
+            </ul>
             <p>Bimbingan ibadah Umroh Insya Allah sesuai dengan Al-Qur'an dan As-Sunnah</p>
           </div>
 
           <div class="mt-6 text-[#555]">
-            <ul>
-              <li><p>*Harga dapat berubah sewaktu-waktu menyesuaikan kondisi & Force Majure</p></li>
-              <li><p>*Jadwal Program dapat berubah sewaktu-waktu</p></li>
-              <li><p>*Syarat & Ketentuan Berlaku</p></li>
+            <h3 class="font-semibold">HARGA TERMASUK :</h3>
+            <ul class="ml-6" v-if="id == 1">
+              <li class="list-disc">☑️ Tiket Pesawat Ekonomi PP</li>
+              <li class="list-disc">☑️ Visa Umrah dan Visa Negara Lain jika Umrah Plus</li>
+              <li class="list-disc">☑️ Hotel di Mekkah dan Madinah (Sesuai Kesepakatan)</li>
+               <li class="list-disc">☑️ Catering Fullboard 3x Sehari (Sesuai Kesepakatan)</li>
+                <li class="list-disc">☑️ Asuransi Perjalanan</li>
+                <li class="list-disc">☑️ Transportasi BUS di Saudi Full Ac (Umrah & Ziarah)</li>
+                <li class="list-disc">☑️ Transportasi BUS di daerah Full Ac</li>
+                <li class="list-disc">☑️ Handling Bandara+Airport Tax</li>
+                <li class="list-disc">☑️ Tip untuk Guide/Sopir di Saudi Arabia</li>
+                 <li class="list-disc">☑️ Air Zamzam 5lt</li>
+                 <li class="list-disc">☑️ Manasik Umrah</li>
+                  <li class="list-disc">☑️ Perlengkapan Umrah</li>
+            </ul>
+
+            <ul class="ml-6" v-else-if="id == 2">
+              <li class="list-disc">☑️ Tiket Pesawat Ekonomi PP</li>
+              <li class="list-disc">☑️ Visa Umrah dan Visa Negara Lain jika Umrah Plus</li>
+              <li class="list-disc">☑️ Hotel di Mekkah dan Madinah (Sesuai Kesepakatan)</li>
+               <li class="list-disc">☑️ Catering Fullboard 3x Sehari (Sesuai Kesepakatan)</li>
+                <li class="list-disc">☑️ Asuransi Perjalanan</li>
+                <li class="list-disc">☑️ Transportasi BUS di Saudi Full Ac (Umrah & Ziarah)</li>
+                <li class="list-disc">☑️ Transportasi BUS di daerah Full Ac</li>
+                <li class="list-disc">☑️ Handling Bandara+Airport Tax</li>
+                <li class="list-disc">☑️ Tip untuk Guide/Sopir di Saudi Arabia</li>
+                 <li class="list-disc">☑️ Air Zamzam 5lt</li>
+                 <li class="list-disc">☑️ Manasik Umrah</li>
+                  <li class="list-disc">☑️ Perlengkapan Umrah</li>
+            </ul>
+
+             <ul class="ml-6" v-else>
+              <li class="list-disc">☑️ Tiket Pesawat Ekonomi PP</li>
+              <li class="list-disc">☑️ Visa Umrah dan Visa Negara Lain jika Umrah Plus</li>
+              <li class="list-disc">☑️ Hotel di Mekkah dan Madinah (Sesuai Kesepakatan)</li>
+               <li class="list-disc">☑️ Catering Fullboard 3x Sehari (Sesuai Kesepakatan)</li>
+                <li class="list-disc">☑️ Asuransi Perjalanan</li>
+                <li class="list-disc">☑️ Transportasi BUS di Saudi Full Ac (Umrah & Ziarah)</li>
+                <li class="list-disc">☑️ Transportasi BUS di daerah Full Ac</li>
+                <li class="list-disc">☑️ Handling Bandara+Airport Tax</li>
+                <li class="list-disc">☑️ Tip untuk Guide/Sopir di Saudi Arabia</li>
+                 <li class="list-disc">☑️ Air Zamzam 5lt</li>
+                 <li class="list-disc">☑️ Manasik Umrah</li>
+                  <li class="list-disc">☑️ Perlengkapan Umrah</li>
             </ul>
           </div>
-
-          <div class="mt-6 text-[#555]">
-            <p>Informasi detail paket dan itenerary, hubungi marketing kami:</p>
-          </div>
-
-          <div class="mt-6 text-[#555]">
-            <h3 class="text-[1.5em]">Pembimbing Jamaah:</h3>
-            <ul>
-              <li><p>Ustad Ahlus Sunnah</p></li>
-            </ul>
-          </div>
-
-          <div class="mt-6 text-[#555]">
-            <h3 class="text-[1.5em]">Harga Termasuk:</h3>
-            <ul>
-              <li><p>☑️ Tiket Pesawat Ekonomi PP</p></li>
-              <li><p>☑️ Manasik Umrah</p></li>
-              <li><p>☑️ Visa</p></li>
-              <li><p>☑️ Handling Bandara+Airport Tax</p></li>
-              <li><p>☑️ Hotel di Saudi (Sahur & Ifthor sesuai itinerary)</p></li>
-              <li><p>☑️ Kereta Ekonomi Cepat (mekkah-madinah)</p></li>
-              <li><p>☑️ Transportasi BUS di Saudi Full Ac</p></li>
-              <li><p>☑️ Tour Badr & Thaif (Kereta Gantung)</p></li>
-              <li><p>☑️ Perlengkapan</p></li>
-            </ul>
-          </div>
-
+         
            <div class="mt-6 text-[#555]">
-            <h3 class="text-[1.5em]">Harga Tidak Termasuk:</h3>
-            <ul>
-              <li><p>⛔Pengeluaran pribadi Jemaah</p></li>
-              <li><p>⛔Paspor & Kartu Kuning (Meningitis)</p></li>
-              <li><p>⛔Upgrade tiket Business Class</p></li>
-              <li><p>⛔Force majure</p></li>
-            </ul>
-          </div>
-
-           <div class="mt-6 text-[#555]">
-            <h3 class="text-[1.5em]">Keunggulan/Kelebihan:</h3>
-            <ul>
-              <li><p>Direct Flight to Madinah</p></li>
+            <h3 class="font-semibold">Harga Tidak Termasuk :</h3>
+            <ul class="ml-6">
+              <li class="list-disc">⛔Pengeluaran pribadi Jemaah</li>
+              <li class="list-disc">⛔Paspor & Kartu Kuning (Meningitis)</li>
+              <li class="list-disc">⛔Upgrade tiket Business Class</li>
+              <li class="list-disc">⛔Force majure</li>
             </ul>
           </div>
 
           <div class="mt-6 text-[#555]">
-            <h3 class="text-[1.5em]">Syarat dan Ketentuan:</h3>
-            <ul>
-              <li><p>- Harga dapat berubah sewaktu-waktu menyesuaikan kondisi & Force Majure</p></li>
-              <li><p>- Jadwal atau Program dapat berubah dapat berubah sewaktu-waktu</p></li>
-              <li><p>- Syarat & ketentuan berlaku</p></li>
+            <h3 class="font-semibold">Keunggulan/Kelebihan :</h3>
+            <ul class="ml-6" v-if="id == 1">
+              <li class="list-disc">Free menginap di Jakarta 1 Hari Sebelum keberangkatan</li>
+              <li class="list-disc">Direct Flight </li>
+              <li class="list-disc">Program 14 hari PP</li>
+              <li class="list-disc">Bisa melaksanakan Shalat Jumat di Mekkah dan Madinah</li>
+            </ul>
+
+            <ul class="ml-6" v-else-if="id == 2">
+              <li class="list-disc">Free menginap di Jakarta 1 Hari Sebelum keberangkatan</li>
+            </ul>
+
+            <ul class="ml-6" v-else>
+              <li class="list-disc">Free menginap di Jakarta 1 Hari Sebelum keberangkatan</li>
+              <li class="list-disc">Direct Flight </li>
             </ul>
           </div>
 
-          <div class="mt-10">
+         
+          <div class="mt-16">
             <div class="flex flex-row justify-center">
               <div class="bg-gray-300 w-6 h-[2px]"></div>
               <div class="bg-blue-600 w-14 h-[2px]"></div>
@@ -153,36 +235,31 @@
             </div>
 
             <div class="text-center mt-3">
-              <h1 class="font-normal text-2xl">HOTEL</h1>
-              <p class="text-gray-500">Hotel Paket Paket Umroh Middle Tengah Agustus 2023</p>
+              <h1 class="font-normal text-2xl">Hotel</h1>
+              <p class="text-gray-500" v-if="id == 1">Hotel Paket Umrah Regular Agustus 2023</p>
+              <p class="text-gray-500" v-else-if="id == 2">Hotel Paket Umrah Plus Turkey</p>
+              <p class="text-gray-500" v-else>Hotel Umrah Regular 2023</p>
             </div>
-            <!-- HOTEL CARD -->
+            <!-- AIRLINES CARD -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-6">
               <div class="shadow-lg">
                 <div class="relative">
                   <div class="absolute left-3 top-3 bg-[rgba(0,0,0,0.6)] text-[#ccc] p-[3px] rounded-sm text-sm">MAKKAH</div>
-                  <img src="https://storage.googleapis.com/muslimpergi/uploads/hotel/photo/36/medium_92884405.jpg" alt="">
+                  <img src="../assets/images/hotel/hotel-mekah1.jpeg" alt="">
                 </div>
                 <div class="p-3">
-                  <ul class="flex flex-row gap-1">
-                    <li><i class="mdi mdi-star text-[#FFC107]"></i></li>
-                    <li><i class="mdi mdi-star text-[#FFC107]"></i></li>
-                    <li><i class="mdi mdi-star text-[#FFC107]"></i></li>
-                    <li><i class="mdi mdi-star text-[#FFC107]"></i></li>
-                  </ul>
-                  <h2 class="text-gray-900 font-normal text-xl">Makarem Ajyad</h2>
-                  <p>
-                    Hotel mewah yang berada di bangunan berbatu ini berjarak ~350 meter dari pelataran Masjid al-Haram dan menara Abraj Al Bait yang terkenal. Kamar simpel
-                  </p>
-
+                  <i class="mdi mdi-star text-[#ff7f3a]"></i>
+                  <i class="mdi mdi-star text-[#ff7f3a]"></i>
+                  <i class="mdi mdi-star text-[#ff7f3a]"></i>
+                  <i class="mdi mdi-star text-[#ff7f3a]"></i>
                   <ul class="mt-5">
                     <li class="flex flex-row gap-2">
                       <p class="text-[#999] font-medium">Check In</p>
-                      <p class="text-[#32a067] font-medium">17 Aug 23, 15:08</p>
+                      <p class="text-[#32a067] font-medium">Agustus 2023</p>
                     </li>
                     <li class="flex flex-row gap-2">
-                      <p class="text-[#999] font-medium">Check out</p>
-                      <p class="text-[#32a067] font-medium">17 Aug 23, 15:08</p>
+                      <p class="text-[#999] font-medium">Check Out</p>
+                      <p class="text-[#32a067] font-medium">Agustus 2023</p>
                     </li>
                   </ul>
                 </div>
@@ -191,28 +268,21 @@
               <div class="shadow-lg">
                 <div class="relative">
                   <div class="absolute left-3 top-3 bg-[rgba(0,0,0,0.6)] text-[#ccc] p-[3px] rounded-sm text-sm">MEDINAH</div>
-                  <img src="https://storage.googleapis.com/muslimpergi/uploads/hotel/photo/345/medium_hotel-ansar-almadina.jpeg" alt="">
+                  <img src="../assets/images/hotel/hotel-madinah.jpg" alt="">
                 </div>
                 
                 <div class="p-3">
-                  <ul class="flex flex-row gap-1">
-                    <li><i class="mdi mdi-star text-[#FFC107]"></i></li>
-                    <li><i class="mdi mdi-star text-[#FFC107]"></i></li>
-                    <li><i class="mdi mdi-star text-[#FFC107]"></i></li>
-                  </ul>
-                  <h2 class="text-gray-900 font-normal text-xl">Ansar Almadinah</h2>
-                  <p>
-                    Ansar AlMadinah Hotel فندق أنصار المدينة Address: 2413 As Salam Rd, Al Haram, Medina 42311, Saudi Arabia Phone: +966148192275
-                  </p>
-
+                      <i class="mdi mdi-star text-[#ff7f3a]"></i>
+                    <i class="mdi mdi-star text-[#ff7f3a]"></i>
+                    <i class="mdi mdi-star text-[#ff7f3a]"></i>
                   <ul class="mt-5">
                     <li class="flex flex-row gap-2">
                       <p class="text-[#999] font-medium">Check In</p>
-                      <p class="text-[#32a067] font-medium">17 Aug 23, 15:08</p>
+                      <p class="text-[#32a067] font-medium">Agustus 2023</p>
                     </li>
                     <li class="flex flex-row gap-2">
-                      <p class="text-[#999] font-medium">Check out</p>
-                      <p class="text-[#32a067] font-medium">17 Aug 23, 15:08</p>
+                      <p class="text-[#999] font-medium">Check Out</p>
+                      <p class="text-[#32a067] font-medium">Agustus 2023</p>
                     </li>
                   </ul>
                 </div>
@@ -229,30 +299,27 @@
 
             <div class="text-center mt-3">
               <h1 class="font-normal text-2xl">Penerbangan</h1>
-              <p class="text-gray-500">Penerbangan Paket Paket Umroh Middle Tengah Agustus 2023</p>
+              <p class="text-gray-500" v-if="id == 1">Penerbangan Paket Umrah Regular Agustus 2023</p>
+              <p class="text-gray-500" v-else-if="id == 2">Penerbangan Paket Umrah Plus Turkey</p>
+              <p class="text-gray-500" v-else>Penerbangan Paket Umrah Regular 2023</p>
             </div>
             <!-- AIRLINES CARD -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-6">
               <div class="shadow-lg">
                 <div class="relative">
-                  <div class="absolute left-3 top-3 bg-[rgba(0,0,0,0.6)] text-[#ccc] p-[3px] rounded-sm text-sm">SAUDIA AIRLINES</div>
-                  <img src="https://storage.googleapis.com/muslimpergi/uploads/airline/logo/1/medium_saudia.jpg" alt="">
+                  <div class="absolute left-3 top-3 bg-[rgba(0,0,0,0.6)] text-[#ccc] p-[3px] rounded-sm text-sm">Garuda Indonesia Airlines</div>
+                  <img src="../assets/images/pesawat/pesawat.webp" alt="">
                 </div>
                 <div class="p-3">
-                  <p class="font-normal">From: </p>
-                  <p class="font-semibold">CGK - Soekarno–Hatta International Airport <span class="font-normal">(Jakarta, ID)</span></p>
-
-                  <p class="font-normal">To: </p>
-                  <p class="font-semibold">JED - King Abdulaziz International Airport <span class="font-normal">(Jeddah, SA)</span></p>
-
+                  <h2 class="font-semibold">CGK-JED</h2>
                   <ul class="mt-5">
                     <li class="flex flex-row gap-2">
                       <p class="text-[#999] font-medium">ETD at</p>
-                      <p class="text-[#32a067] font-medium">17 Aug 23, 15:08</p>
+                      <p class="text-[#32a067] font-medium">Agustus 2023 </p>
                     </li>
                     <li class="flex flex-row gap-2">
                       <p class="text-[#999] font-medium">ETA at</p>
-                      <p class="text-[#32a067] font-medium">17 Aug 23, 15:08</p>
+                      <p class="text-[#32a067] font-medium">Agustus 2023 </p>
                     </li>
                   </ul>
                 </div>
@@ -260,25 +327,21 @@
 
               <div class="shadow-lg">
                 <div class="relative">
-                  <div class="absolute left-3 top-3 bg-[rgba(0,0,0,0.6)] text-[#ccc] p-[3px] rounded-sm text-sm">SAUDIA AIRLINES</div>
-                  <img src="https://storage.googleapis.com/muslimpergi/uploads/airline/logo/1/medium_saudia.jpg" alt="">
+                  <div class="absolute left-3 top-3 bg-[rgba(0,0,0,0.6)] text-[#ccc] p-[3px] rounded-sm text-sm">Garuda Indonesia Airlines</div>
+                  <img src="../assets/images/pesawat/pesawat.webp" alt="">
                 </div>
                 
                 <div class="p-3">
-                  <p class="font-normal">From: </p>
-                  <p class="font-semibold">CGK - Soekarno–Hatta International Airport <span class="font-normal">(Jakarta, ID)</span></p>
-
-                  <p class="font-normal">To: </p>
-                  <p class="font-semibold">JED - King Abdulaziz International Airport <span class="font-normal">(Jeddah, SA)</span></p>
-
+                  <h2 class="font-semibold">JED-CGK</h2>
+                  
                   <ul class="mt-5">
                     <li class="flex flex-row gap-2">
                       <p class="text-[#999] font-medium">ETD at</p>
-                      <p class="text-[#32a067] font-medium">17 Aug 23, 15:08</p>
+                      <p class="text-[#32a067] font-medium">Agustus 2023</p>
                     </li>
                     <li class="flex flex-row gap-2">
                       <p class="text-[#999] font-medium">ETA at</p>
-                      <p class="text-[#32a067] font-medium">17 Aug 23, 15:08</p>
+                      <p class="text-[#32a067] font-medium">Agustus 2023</p>
                     </li>
                   </ul>
                 </div>
@@ -295,14 +358,16 @@
 
             <div class="text-center mt-3">
               <h1 class="font-normal text-2xl">Transportasi</h1>
-              <p class="text-gray-500">Transportasi Paket Paket Umroh Middle Tengah Agustus 2023</p>
+              <p class="text-gray-500" v-if="id == 1">Transportasi Paket Umrah Regular Agustus 20233</p>
+              <p class="text-gray-500" v-else-if="id == 2">Transportasi Paket Umrah Plus Turkey</p>
+               <p class="text-gray-500" v-else>Transportasi Paket Umrah Regular 2023</p>
             </div>
             <!-- Transportasi CARD -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-6">
               <div class="shadow-lg">
                 <div class="relative">
-                  <div class="absolute left-3 top-3 bg-[rgba(0,0,0,0.6)] text-[#ccc] p-[3px] rounded-sm text-sm">HARAMAIN HIGH SPEED RAILWAY</div>
-                  <img src="https://storage.googleapis.com/muslimpergi/uploads/transport/logo/45/kereta-cepat-mekkah-madinah.jpg" alt="">
+                  <div class="absolute left-3 top-3 bg-[rgba(0,0,0,0.6)] text-[#ccc] p-[3px] rounded-sm text-sm">Bus Full AC</div>
+                  <img src="../assets/images/pesawat/bis.jpg" alt="">
                 </div>
               </div>
             </div>
@@ -313,18 +378,34 @@
       <div class="lg:w-[30%] w-full px-4 lg:px-0 flex flex-col">
         <div class="bg-[#f8f8f8] rounded-md border-[1px]">
           <h1 class="text-center text-3xl font-normal pt-4">Harga Paket</h1>
-          <p
+          <p v-if="id == 1"
+            class="text-red-400 text-sm font-semibold text-normal text-center pt-2"
+          >
+            Sisa seat: 30 pax
+          </p>
+          <p v-else-if="id == 2"
+            class="text-red-400 text-sm font-semibold text-normal text-center pt-2"
+          >
+            Sisa seat: 45 pax
+          </p>
+          <p v-else
             class="text-red-400 text-sm font-semibold text-normal text-center pt-2"
           >
             Sisa seat: 45 pax
           </p>
           <div class="bg-white rounded-md mx-6 mt-3">
-            <h1 class="text-center pt-3 text-blue-400 text-3xl">
-              Rp37.000.000,-
+            <h1 v-if="id == 1" class="text-center pt-3 text-blue-400 text-3xl">
+              Rp. 33.000.000,-
+            </h1>
+            <h1 v-else-if="id == 2" class="text-center pt-3 text-blue-400 text-3xl">
+              Rp. ,-
+            </h1>
+            <h1 v-else class="text-center pt-3 text-blue-400 text-3xl">
+              Rp. 30.000.000 - 35.000.000,-
             </h1>
             <h5 class="text-center py-3 text-blue-400 text-lg">[QUAD]</h5>
           </div>
-          <div class="bg-white rounded-md mx-6 mt-3">
+          <!-- <div class="bg-white rounded-md mx-6 mt-3">
             <h5 class="text-center py-3 text-blue-400 text-lg">Rp37.450.000,- [TRIPLE]</h5>
           </div>
           <div class="bg-white rounded-md mx-6 mt-3">
@@ -332,13 +413,13 @@
           </div>
           <div class="bg-white rounded-md mx-6 mt-3">
             <h5 class="text-center py-3 text-blue-400 text-lg">Rp21.550.000,- [CHILD] ANAK USIA 2 - 8 TAHUN (TANPA PERLENGKAPAN)</h5>
-          </div>
+          </div> -->
 
           <div class="mx-6 mt-3 flex flex-row justify-between">
-            <button class="bg-[#218838] hover:bg-[#1e7e34] text-white text-sm font-normal px-5 py-2 rounded-md">
+            <a href="https://wa.me/62811212174" class="bg-[#218838] hover:bg-[#1e7e34] text-white text-sm font-normal px-5 py-2 rounded-md">
               <i class="mdi mdi-whatsapp"></i>
               Tanya CS
-            </button>
+            </a>
 
             <button class="bg-[#138496] hover:bg-[#117a8b] text-white text-sm font-normal px-5 py-2 rounded-md">
               <i class="mdi mdi-printer"></i>
@@ -347,10 +428,10 @@
           </div>
 
           <div class="mx-6 mt-3 flex flex-row justify-between pb-5">
-            <button class="bg-[#e0a800] hover:bg-[#d39e00] w-full text-gray-900 text-sm font-normal px-5 py-2 rounded-md">
+            <a href="https://form.jotform.com/tswtravel.hajjumra/formulir-pendaftaran-umrah-2022" class="bg-[#e0a800] hover:bg-[#d39e00] w-full text-gray-900 text-sm font-normal px-5 py-2 rounded-md">
               <i class="mdi mdi-airplane"></i>
-              Login untuk Booking
-            </button>
+              Daftar Secara Online
+            </a>
           </div>
         </div>
 
@@ -359,36 +440,37 @@
          
           <ul class="px-3 mt-3">
             <li class="flex flex-row justify-between gap-4 mb-3">
-              <img class="w-[64px] h-[80px]" src="https://storage.googleapis.com/muslimpergi/uploads/listing/pict/2248/medium_WhatsApp_Image_2023-03-02_at_10.38.43_AM.jpeg" alt="">
+              <img class="w-[64px] h-[80px]" src="../assets/images/paket/umrah_agustus.jpeg" alt="">
               <div>
-                <p class="text-[#999999] text-xs">27 Feb 23, 10:33</p>
-                <h5 class="">PAKET UMROH ITIKAF RAMADHAN V2, 10 APRIL 2023, 18 HARI</h5>
+                <p class="text-[#999999] text-xs">Agustus 2023</p>
+                <h5 class="">UMRAH REGULER AGUSTUS 2023</h5>
+              </div>
+            </li>
+
+            <!-- <li class="flex flex-row justify-between gap-4 mb-3">
+              <img class="w-[64px] h-[80px]" src="../assets/images/paket/turkey.png" alt="">
+              <div>
+                <p class="text-[#999999] text-xs">November 2023</p>
+                <h5 class="">Umrah Plus Turkey</h5>
+              </div>
+            </li> -->
+             <li class="flex flex-row gap-4 mb-3">
+              <img class="w-[64px] h-[80px]" src="../assets/images/paket/turkey.png" alt="">
+              <div>
+                <p class="text-[#999999] text-xs">November 2023</p>
+                <h5 class="">Umrah Plus Turkey</h5>
               </div>
             </li>
 
             <li class="flex flex-row justify-between gap-4 mb-3">
-              <img class="w-[64px] h-[80px]" src="https://storage.googleapis.com/muslimpergi/uploads/listing/pict/2248/medium_WhatsApp_Image_2023-03-02_at_10.38.43_AM.jpeg" alt="">
+              <img class="w-[64px] h-[80px]" src="../assets/images/paket/reguler.jpeg" alt="">
               <div>
-                <p class="text-[#999999] text-xs">27 Feb 23, 10:33</p>
-                <h5 class="">PAKET UMROH ITIKAF RAMADHAN V2, 10 APRIL 2023, 18 HARI</h5>
+                <p class="text-[#999999] text-xs">Oktober, November, Desember 2023</p>
+                <h5 class="">Umrah Regular 2023</h5>
               </div>
             </li>
 
-            <li class="flex flex-row justify-between gap-4 mb-3">
-              <img class="w-[64px] h-[80px]" src="https://storage.googleapis.com/muslimpergi/uploads/listing/pict/2248/medium_WhatsApp_Image_2023-03-02_at_10.38.43_AM.jpeg" alt="">
-              <div>
-                <p class="text-[#999999] text-xs">27 Feb 23, 10:33</p>
-                <h5 class="">PAKET UMROH ITIKAF RAMADHAN V2, 10 APRIL 2023, 18 HARI</h5>
-              </div>
-            </li>
-
-            <li class="flex flex-row justify-between gap-4 mb-3">
-              <img class="w-[64px] h-[80px]" src="https://storage.googleapis.com/muslimpergi/uploads/listing/pict/2248/medium_WhatsApp_Image_2023-03-02_at_10.38.43_AM.jpeg" alt="">
-              <div>
-                <p class="text-[#999999] text-xs">27 Feb 23, 10:33</p>
-                <h5 class="">PAKET UMROH ITIKAF RAMADHAN V2, 10 APRIL 2023, 18 HARI</h5>
-              </div>
-            </li>
+            
           </ul>
         </div>
 
@@ -421,6 +503,16 @@ export default {
   components: {
     Footer,
     Navbar,
+  },
+
+  data(){
+    return {
+      id: null
+    }
+  },
+
+  mounted() {
+    this.id = this.$route.params.id;
   },
 };
 </script>

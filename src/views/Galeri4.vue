@@ -37,6 +37,13 @@ import Navbar from "../components/Navbar.vue";
 import Footer from "../components/Footer.vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 
+import satu from '@/assets/images/galeri/syawal/syawal1.jpeg';
+import dua from '@/assets/images/galeri/syawal/syawal2.jpeg';
+import tiga from '@/assets/images/galeri/syawal/syawal3.jpeg';
+import empat from '@/assets/images/galeri/syawal/syawal4.jpeg';
+import lima from '@/assets/images/galeri/syawal/syawal5.jpeg';
+import enam from '@/assets/images/galeri/syawal/syawal6.jpeg';
+
 export default {
   components: {
     Navbar,
@@ -48,9 +55,12 @@ export default {
   data() {
     return {
       slides: [
-        "https://static.republika.co.id/uploads/images/inpicture_slide/iai-tazkia-memberangkatkan-16-karyawan-dan-2-mahasiswa-terbaik_220319062649-872.jpg",
-        "https://percayaumroh.com/wp-content/uploads/2022/08/19-september-011.jpg",
-        "http://sentosawisata.com/wp-content/uploads/2014/10/Umroh-reguler.jpg",
+         satu,
+        dua,
+        tiga,
+        empat,
+        lima,
+        enam
       ],
       // modules: [Pagination],
     };

@@ -3,13 +3,14 @@
     <div
       class="lg:container flex flex-row px-5 py-4 lg:px-0 justify-between lg:pt-[15px] lg:pl-[5px]"
     >
-      <div @click="toHome()">
-        <img
-          class="w-[192.5px] h-[55px]"
-          src="/images/header-logo.jpg"
-          alt=""
-        />
-      </div>
+      <div class="flex items-center cursor-pointer" @click="toHome()">
+  <img
+    class="w-14 h-14 mr-2"
+    src="../assets/images/logo-fix.jpg"
+    alt=""
+  />
+  <h1 class="text-4xl logo-font">TSW Tour & Travel</h1>
+</div>
 
       <div class="visible block lg:invisible">
         <button
@@ -112,7 +113,7 @@
                 @click="toHaji()"
                 class="block px-4 py-2 text-sm text-indigo-100 hover:bg-indigo-400 hover:text-indigo-100 cursor-pointer"
               >
-                Haji
+                Syarat Pendaftaran
               </a>
               <a
                 @click="toTour()"
@@ -147,7 +148,7 @@ export default {
         },
         {
           section_id: "gellery",
-          name: "Galleri & Travel",
+          name: "Galeri TSW",
         },
       ],
       isScrolled: false,
